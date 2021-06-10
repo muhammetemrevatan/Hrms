@@ -1,0 +1,28 @@
+package kodlamaio.hrms.business.abstracts;
+
+import java.util.List;
+
+
+
+import kodlamaio.hrms.core.results.DataResult;
+import kodlamaio.hrms.core.results.Result;
+import kodlamaio.hrms.entities.concretes.Candidate;
+import kodlamaio.hrms.entities.concretes.ForeignLanguage;
+import kodlamaio.hrms.entities.concretes.Resume;
+import kodlamaio.hrms.entities.concretes.SchoolInfo;
+import kodlamaio.hrms.entities.concretes.Technology;
+import kodlamaio.hrms.entities.dtos.BusinessExperienceAddDto;
+import kodlamaio.hrms.entities.dtos.ForeignLanguageAddDto;
+import kodlamaio.hrms.entities.dtos.ResumeShowDto;
+
+public interface ResumeService {
+	
+	DataResult<List<Resume>> getAll();
+	DataResult<List<ResumeShowDto>> getAllCandidateCv(Candidate candidate);
+	Result addResume(Resume resume);
+	Result addBusinessExperience(BusinessExperienceAddDto businessExperienceAddDto);
+	Result addForeignLanguage(ForeignLanguageAddDto foreignLanguageAddDto);
+	Result addSchoolInfo(SchoolInfo schoolInfo);
+	Result addTechnology(Technology technology);
+	
+}

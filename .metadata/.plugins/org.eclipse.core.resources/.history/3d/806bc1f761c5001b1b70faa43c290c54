@@ -1,0 +1,15 @@
+package kodlamaio.hrms.entities.dtos;
+
+import java.sql.Date;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+public class ForeignLanguageAddDto {
+
+	@JsonIgnore
+	private int id;
+	private int cvId;
+	private String languageName;
+	private char languageLevel;
+	private Date createdDate;
+}

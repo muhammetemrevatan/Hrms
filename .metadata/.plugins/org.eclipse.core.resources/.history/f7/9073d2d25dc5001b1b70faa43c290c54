@@ -1,0 +1,11 @@
+package kodlamaio.hrms.entities.dtos;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+public class BusinessExperienceAddDto {
+
+	@JsonIgnore
+	private int id;
+	
+	private int cvId;
+}

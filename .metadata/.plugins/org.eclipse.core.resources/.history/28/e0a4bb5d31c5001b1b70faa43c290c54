@@ -1,0 +1,5 @@
+package kodlamaio.hrms.core.dtoConverter.concretes;
+
+public class DtoConverterManager {
+
+}

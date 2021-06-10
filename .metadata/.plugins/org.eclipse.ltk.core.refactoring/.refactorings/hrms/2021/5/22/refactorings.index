@@ -1,0 +1,20 @@
+1622124463969	Delete element
+1622130081313	Delete element
+1622232072090	Delete element
+1622234599735	Delete element
+1622239400874	Delete element
+1622239404492	Delete element
+1622239412777	Delete element
+1622241067353	Rename package 'kodlamaio.hrms.adapters.service'
+1622241081677	Rename package 'kodlamaio.hrms.adapters.api'
+1622241109969	Rename type 'MernisAdapter'
+1622243052367	Rename type 'VerifyApiService'
+1622243073773	Rename type 'VerifyApiMernisAdapterManager'
+1622243087145	Rename type 'MernisVerifyAdapterManager'
+1622250056425	Delete element
+1622250075769	Delete element
+1622250120244	Rename type 'JobAdvertisementsService'
+1622250127055	Rename type 'JobAdvertisements'
+1622250673399	Rename type 'JobAdvertisementsDao'
+1622290335726	Move compilation unit
+1622290343748	Move compilation unit

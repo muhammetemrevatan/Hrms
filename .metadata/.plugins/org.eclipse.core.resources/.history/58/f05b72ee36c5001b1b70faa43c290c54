@@ -1,0 +1,17 @@
+package kodlamaio.hrms.business.abstracts;
+
+import java.util.List;
+
+import kodlamaio.hrms.core.results.DataResult;
+import kodlamaio.hrms.core.results.Result;
+import kodlamaio.hrms.entities.concretes.JobAdvertisement;
+import kodlamaio.hrms.entities.dtos.JobAdvertisementShowDto;
+
+public interface JobAdvertisementService {
+	
+	DataResult<List<JobAdvertisementShowDto>> getAll();
+	DataResult<List<JobAdvertisementShowDto>> getAllSorted();
+	DataResult<List<JobAdvertisementShowDto>> getAllActive();
+	Result updateActive(int employerId);
+	Result add(JobAdvertisement jobAdvertisement);
+}

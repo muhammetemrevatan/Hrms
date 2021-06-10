@@ -1,0 +1,5 @@
+package kodlamaio.hrms.core.dtoConverter.abstracts;
+
+public interface DtoConverterService {
+
+}

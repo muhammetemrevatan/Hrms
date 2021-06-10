@@ -1,0 +1,6 @@
+package kodlamaio.hrms.core.cloudinary;
+
+public interface CloudinaryService {
+	
+	DataResult<?> save(MultipartFile file);
+}

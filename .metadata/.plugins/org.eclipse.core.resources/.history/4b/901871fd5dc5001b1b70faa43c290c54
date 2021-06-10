@@ -1,0 +1,16 @@
+package kodlamaio.hrms.entities.dtos;
+
+import java.sql.Date;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+public class BusinessExperienceAddDto {
+
+	@JsonIgnore
+	private int id;
+	private int cvId;
+	private String businessName;
+	private String businessPosition;
+	private Date yearOfStart;
+	private Date yearOfEnd;
+}

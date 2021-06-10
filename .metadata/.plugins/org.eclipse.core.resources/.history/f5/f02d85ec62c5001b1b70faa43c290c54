@@ -1,0 +1,18 @@
+package kodlamaio.hrms.entities.dtos;
+
+import java.sql.Date;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+public class SchoolInfoAddDto {
+
+	@JsonIgnore
+	private int id;
+	private int cvId;
+	private int degreeId;
+	private String department;
+	private Date yearOfStart;
+	private Date yearOfEnd;
+	@JsonIgnore
+	private Date createdDate;
+}

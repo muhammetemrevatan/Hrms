@@ -1,0 +1,12 @@
+package kodlamaio.hrms.entities.dtos;
+
+public class JobAdvertisementAddDto {
+	
+	private int id;
+	private int employerId;
+	private int jobPositionId;
+	private int openPositionNumber;
+	private int salaryMin;
+	private int salaryMax;
+	private int cityId;
+}

@@ -1,0 +1,15 @@
+package kodlamaio.hrms.entities.dtos;
+
+import java.sql.Date;
+
+import kodlamaio.hrms.entities.concretes.Degree;
+
+public class SchoolInfoShowDto {
+
+	private int id;
+	private String schoolName;
+	private String degreeDegreeName;
+	private String department;
+	private Date yearOfStart;
+	private Date yearOfEnd;
+}

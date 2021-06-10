@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+}
+
+.ui.main.container{
+  margin-top: 0em;
+  background-color: black;
+  position: fixed;
+
+}
+
+.backgroundimagesirket{
+  background-color: gainsboro;
+}
+
+.font-family-librebasker{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 26px;
+  text-align: center;
+  color: darkblue;
+}
+
+.ui.grid>.row {
+  padding-bottom: 0em !important;
+}
+
