@@ -1,7 +1,0 @@
-package kodlamaio.hrms.entities.dtos;
-
-public class SchoolInfoAddDto {
-
-	private int id;
-	private int cvId;
-}

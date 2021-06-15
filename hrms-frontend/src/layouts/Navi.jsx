@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Button, Container, Icon, Menu, Segment } from "semantic-ui-react";
+import { Button, Container, Icon, Menu } from "semantic-ui-react";
 import SignedIn from "./SignedIn";
 import SignedOut from "./SignedOut";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 
 export default function Navi() {
 
@@ -19,8 +20,6 @@ export default function Navi() {
 
   return (
     <div>
-      <Segment.Group>
-        <Segment inverted>
           <Menu inverted fixed="top" size="large">
             <Container>
               <Menu.Item>
@@ -28,31 +27,29 @@ export default function Navi() {
                 Hrms
               </Menu.Item>
               <Menu.Menu position="left">
-                <Menu.Item>
+                <Menu.Item as={Link} to="/">
                   <Icon name="accusoft" />
-                  Menu
+                  Menü
                 </Menu.Item>
-                <Menu.Item>
+                <Menu.Item as={Link} to="/employers">
                   <Icon name="building outline" />
-                  Companies
+                  Şirketler
                 </Menu.Item>
                 <Menu.Item>
-                  <Icon name="conversation" />
-                  Contact
+                  <Icon name="conversation" as={Link} to="/"/>
+                  İletişim
                 </Menu.Item>
               </Menu.Menu>
 
               <Menu.Menu position="right">
                 <Menu.Item>
-                  <Button inverted>Job Advertisement List</Button>
+                  <Button  as={Link} to="/jobadvertisementform">İş İlanı Ekle</Button>
                 </Menu.Item>
                 {isAuthenticated ? <SignedIn singOut={handleSignOut} bisey="1"/> 
                 : <SignedOut signIn={handleSignIn}/>}
               </Menu.Menu>
             </Container>
           </Menu>
-        </Segment>
-      </Segment.Group>
     </div>
   );
 }

@@ -13,10 +13,16 @@ public interface JobAdvertisementDao extends JpaRepository<JobAdvertisement, Int
 	
 	List<JobAdvertisement> getById(String message);
 	
-	List<JobAdvertisement> findAllByIsActiveTrue();
+	List<JobAdvertisement> findAllByIsActiveTrueAndEmployeeConfirmTrue();
 	
+	List<JobAdvertisement> findByEmployeeConfirmTrue();
+	
+
 	JobAdvertisement findById(int jobAdvertisementId);
 	
 	@Query("From kodlamaio.hrms.entities.concretes.JobAdvertisement where employer.id=:employerId")
 	JobAdvertisement getbyEmployerId(int employerId);
+	
+	
+	
 }

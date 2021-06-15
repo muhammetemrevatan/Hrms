@@ -47,14 +47,24 @@ public class JobAdvertisementController {
 		return this.jobAdvertisementService.getAllSortedDate();
 	}
 	
-	@GetMapping("getallactive")
-	public DataResult<List<JobAdvertisementShowDto>> getAllActive() {
-		return this.jobAdvertisementService.getAllActive();
+	@GetMapping("getallactiveandconfirm")
+	public DataResult<List<JobAdvertisementShowDto>> getAllActiveAndConfirm() {
+		return this.jobAdvertisementService.getAllActiveAndConfirm();
 	}
 	
-	@PutMapping("{jobAdvertisementId}")
+	@GetMapping("getall")
+	public DataResult<List<JobAdvertisementShowDto>> getAll() {
+		return this.jobAdvertisementService.getAll();
+	}
+	
+	@PutMapping("/{jobAdvertisementId}")
 	public Result updateDisable(@PathVariable("jobAdvertisementId") int jobAdvertisementId) {
 		return this.jobAdvertisementService.updateDisable(jobAdvertisementId);
+	}
+	
+	@PutMapping("/confirm/{jobAdvertisementId}")
+	public Result updateEmployeeConfirmTrue(@PathVariable("jobAdvertisementId") int jobAdvertisementIdd) {
+		return this.jobAdvertisementService.updateEmployeeConfirmTrue(jobAdvertisementIdd);
 	}
 	
 	@PostMapping("/add")

@@ -1,15 +1,15 @@
 import React from "react";
 import { Button, Menu } from "semantic-ui-react";
 
-export default function SignedOut({ signIn }) {
+export default function SignedOut({ signIn },{ clickedd}) {
     
   return (
     <div>
       <Menu.Item>
         <Button.Group>
-          <Button onClick={signIn}>Sing In</Button>
+          <Button onClick={signIn}>Giriş Yap</Button>
           <Button.Or />
-          <Button positive>Sign Up</Button>
+          <Button positive onClick={clickedd}>Kayıt Ol</Button>
         </Button.Group>
       </Menu.Item>
     </div>

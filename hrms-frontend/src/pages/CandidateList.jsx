@@ -7,14 +7,12 @@ export default function CandidateList() {
 
   useEffect(() => {
     let candidateService = new CandidateService();
-    candidateService
-      .getCandidate()
-      .then((result) => setCandidates(result.data.data));
+    candidateService.getCandidate().then((result) => setCandidates(result.data.data));
   }, []);
 
   return (
     <div>
-      <Container>
+      <Container style={{ margin: "2em 2em 0em 0em", padding: "2em 0em 2em 0em" }}>
         {candidates.map((candidate) => (
           <Card
             style={{ margin: "2em 2em 3em 1em", padding: "2em 0em 1em 2em" }}

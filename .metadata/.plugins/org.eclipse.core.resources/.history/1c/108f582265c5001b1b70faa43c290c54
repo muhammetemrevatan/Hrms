@@ -1,8 +1,0 @@
-package kodlamaio.hrms.entities.dtos;
-
-public class TechnologyAddDto {
-
-	private int id;
-	private int cvId;
-	private String technologyName;
-}

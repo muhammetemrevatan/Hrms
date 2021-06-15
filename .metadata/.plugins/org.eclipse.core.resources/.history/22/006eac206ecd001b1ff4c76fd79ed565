@@ -1,0 +1,25 @@
+package kodlamaio.hrms.dataAccess.abstracts;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import kodlamaio.hrms.entities.concretes.JobAdvertisement;
+
+@Repository
+public interface JobAdvertisementDao extends JpaRepository<JobAdvertisement, Integer>{
+	
+	List<JobAdvertisement> getById(String message);
+	
+	List<JobAdvertisement> findAllByIsActiveTrueAndEmployeeConfirmTrue();
+	
+	@Query("SELECT c FROM JobAdvertisement c WHERE employeeConfirm is null")
+	List<JobAdvertisement> findJobAdvertisementByEmployeeConfirm();
+	
+	JobAdvertisement findById(int jobAdvertisementId);
+	
+	@Query("From kodlamaio.hrms.entities.concretes.JobAdvertisement where employer.id=:employerId")
+	JobAdvertisement getbyEmployerId(int employerId);
+}

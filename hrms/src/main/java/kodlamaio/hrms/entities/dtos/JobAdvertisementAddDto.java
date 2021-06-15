@@ -27,5 +27,9 @@ public class JobAdvertisementAddDto {
 	private String jobDescription;
 	@JsonIgnore
 	private boolean isActive;
+	@JsonIgnore
+	private boolean employeeConfirm;
+	private int wayOfWorkId;
+	private int workTypeId;
 	
 }

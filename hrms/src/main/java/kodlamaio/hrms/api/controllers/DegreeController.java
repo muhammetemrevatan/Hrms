@@ -25,7 +25,7 @@ import kodlamaio.hrms.core.results.ErrorDataResult;
 import kodlamaio.hrms.entities.concretes.Degree;
 
 @RestController
-@RequestMapping("/api/degree")
+@RequestMapping("/api/degrees")
 public class DegreeController {
 	
 	private DegreeService degreeService;

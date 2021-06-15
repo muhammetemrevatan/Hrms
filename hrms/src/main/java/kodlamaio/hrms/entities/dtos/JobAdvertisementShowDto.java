@@ -13,6 +13,7 @@ public class JobAdvertisementShowDto {
 	
 	private int id;
 	private String employerCompanyName;
+	private String employerId;
 	private String jobPositionPosition;
 	private int openPositionNumber;
 	private Date createdDate;
@@ -21,4 +22,8 @@ public class JobAdvertisementShowDto {
 	private String salaryMin;
 	private String cityCity;
 	private String jobDescription;
+	private String wayOfWorkName;
+	private String workTypeName;
+	private boolean employeeConfirm;
+	private boolean isActive;
 }

@@ -13,10 +13,10 @@ export default function EmployerList() {
 
   return (
     <div>
-      <Container>
+      <Container style={{ margin: "2em 2em 0em 0em", padding: "2em 0em 2em 0em" }}>
         {employers.map((employer) => (
           <Card
-            style={{ margin: "2em 2em 3em 1em", padding: "2em 0em 1em 2em" }}
+            style={{ margin: "3em 2em 2em 1em", padding: "2em 0em 2em 0em" }}
             fluid
             key={employer.id}
           >
@@ -24,7 +24,7 @@ export default function EmployerList() {
               <Card.Header>
                 {employer.companyName}
               </Card.Header>
-              <Card.Meta>Aday</Card.Meta>
+              <Card.Meta>Şirket</Card.Meta>
               <Card.Description>
                 {employer.mail}
                 <br />

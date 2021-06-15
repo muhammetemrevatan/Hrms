@@ -1,9 +1,0 @@
-package kodlamaio.hrms.entities.dtos;
-
-public class JobAdvertisementAddDto {
-	
-	private String employerCompanyName;
-	private String jobPositionPosition;
-	private int openPositionNumber;
-	private String description;
-}

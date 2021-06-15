@@ -41,9 +41,9 @@ public class JobAdvertisementManager implements JobAdvertisementService{
 	}
 
 	@Override
-	public DataResult<List<JobAdvertisementShowDto>> getAllActive() {
+	public DataResult<List<JobAdvertisementShowDto>> getAllActiveAndConfirm() {
 		return new SuccessDataResult<List<JobAdvertisementShowDto>>
-		(dtoConverterService.dtoConverter(jobAdvertisementsDao.findAllByIsActiveTrue(), JobAdvertisementShowDto.class),"Listeleme başarılı");
+		(dtoConverterService.dtoConverter(jobAdvertisementsDao.findAllByIsActiveTrueAndEmployeeConfirmTrue(), JobAdvertisementShowDto.class),"Listeleme başarılı");
 	}
 
 	@Override
@@ -55,7 +55,7 @@ public class JobAdvertisementManager implements JobAdvertisementService{
 		if(jobAdvertisement.isActive() == false) {
 			return new ErrorResult("İlan zaten deaktif durumda.");
 		}
-		jobAdvertisement.setActive(false);
+		jobAdvertisement.setActive(true);
 		jobAdvertisementsDao.save(jobAdvertisement);
 		return new SuccessResult("İlan deaktif duruma getirildi.");
 	}
@@ -65,8 +65,25 @@ public class JobAdvertisementManager implements JobAdvertisementService{
 		LocalDate date = (LocalDate.now());
 		jobAdvertisementAddDto.setCreatedDate(Date.valueOf(date));
 		jobAdvertisementAddDto.setActive(true);
+		jobAdvertisementAddDto.setEmployeeConfirm(false);
 		jobAdvertisementsDao.save((JobAdvertisement) dtoConverterService.dtoClassConverter(jobAdvertisementAddDto,JobAdvertisement.class));
 		return new SuccessResult("Başarıyla kayıt oldunuz.");
 	}
 
+	@Override
+	public DataResult<List<JobAdvertisementShowDto>> getAll() {
+		return new SuccessDataResult<List<JobAdvertisementShowDto>>
+		(dtoConverterService.dtoConverter(jobAdvertisementsDao.findAll(), JobAdvertisementShowDto.class),"Listeleme başarılı");
+	}
+
+	@Override
+	public Result updateEmployeeConfirmTrue(int jobAdvertisementIdd) {
+		if(!jobAdvertisementsDao.existsById(jobAdvertisementIdd)) {
+			return new SuccessResult("Bu id'ye ait bir iş ilanı yok");
+		}
+		JobAdvertisement jobAdvertisement = jobAdvertisementsDao.getOne(jobAdvertisementIdd);
+		jobAdvertisement.setEmployeeConfirm(true);
+		jobAdvertisementsDao.save(jobAdvertisement);
+		return new SuccessResult("İlan onaylandı.");
+	}
 }

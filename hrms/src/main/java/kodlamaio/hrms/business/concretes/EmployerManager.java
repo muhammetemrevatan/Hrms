@@ -23,7 +23,6 @@ public class EmployerManager implements EmployerService{
 	private UserDao userDao;
 	private MailVerifyService mailVerifyService;
 
-	
 	@Autowired
 	public EmployerManager(EmployerDao employerDao, UserDao userDao, MailVerifyService mailVerifyService) {
 		super();

@@ -14,7 +14,7 @@ export default function JobPositionList() {
 
   return (
     <div>
-      <Container>
+      <Container style={{ margin: "2em 2em 0em 0em", padding: "2em 0em 2em 0em" }}>
         {jobPositions.map((jobPosition) => (
           <Card
             style={{ margin: "2em 2em 3em 1em", padding: "2em 0em 1em 2em" }}

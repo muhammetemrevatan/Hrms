@@ -1,7 +1,0 @@
-package kodlamaio.hrms.entities.dtos;
-
-public class ResumeAddDto {
-	
-	private int id;
-	private String photo;
-}

@@ -10,7 +10,9 @@ import kodlamaio.hrms.entities.dtos.JobAdvertisementShowDto;
 public interface JobAdvertisementService {
 	
 	DataResult<List<JobAdvertisementShowDto>> getAllSortedDate();
-	DataResult<List<JobAdvertisementShowDto>> getAllActive();
+	DataResult<List<JobAdvertisementShowDto>> getAllActiveAndConfirm();
+	DataResult<List<JobAdvertisementShowDto>> getAll();
 	Result updateDisable(int jobAdvertisementId);
+	Result updateEmployeeConfirmTrue(int jobAdvertisementId);
 	Result add(JobAdvertisementAddDto jobAdvertisementAddDto);
 }
